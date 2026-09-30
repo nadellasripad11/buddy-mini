@@ -93,3 +93,31 @@ connects to anything except the ESP32, so a broken part can't break the others
 and i can unplug things one at a time when debugging. also every single part
 needs ground — five parts, five ground wires — which is exactly what the long
 breadboard rails are for.
+
+## pin plan + the 3 faces
+
+![pin plan](../media/pin-plan.png)
+
+picked the actual GPIO pins: **21 + 22** for the OLED, **32 + 33** for the buttons,
+**25** for the buzzer, **26** for the LED.
+
+the real lesson here was how many ESP32 pins i'm *not* allowed to touch. 6–11 are
+wired to the chip's internal flash — using one stops the board booting at all.
+0, 2, 12 and 15 are "strapping pins," which the ESP32 reads the instant it powers
+on to decide how to boot, so hanging a button off one can stop it starting or
+uploading. 1 and 3 are the usb serial lines. and 34–39 are input-only with no
+internal pull-ups, so they'd need physical 10k resistors.
+
+that last one is why i landed on 32 and 33 for the buttons — they have pull-ups
+built into the chip, so i can switch them on in code with INPUT_PULLUP and skip the
+10k resistors entirely. side effect: a pressed button reads LOW, not HIGH. feels
+backwards but that's how pull-ups work.
+
+also sketched the three faces. they all share the same mouth and eye positions —
+only the eye *shape* changes. normal is two filled circles, happy is two upward
+arcs, blink is two flat lines. that's deliberate: if only the eye shape changes,
+a blink is a cheap swap instead of redrawing a whole face.
+
+one thing i'm making myself remember for when the kit arrives: pin *order along the
+edge* is different between esp32 boards. i go by the number printed on the board,
+not by where it sits in my drawing.

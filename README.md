@@ -24,6 +24,10 @@ v1 is the same brain and face running on a bare breadboard. the case comes later
 
 ![block diagram](media/block-diagram.png)
 
+## pin plan
+
+![pin plan](media/pin-plan.png)
+
 ## status
 
 | version | what it is | state |
@@ -83,6 +87,7 @@ buddy-mini/
 - [01 — scope](docs/01-scope.md) — what v1 is and isn't
 - [02 — parts and what they do](docs/02-parts.md) — every component explained
 - [03 — block diagram](docs/03-block-diagram.md) — how the five parts hang off the ESP32
+- [04 — pin plan](docs/04-pin-plan.md) — which GPIO pins each part gets, and which pins are off-limits
 - [journal](journal/README.md) — the devlog
 
 ## hardware
