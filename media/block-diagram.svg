@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640" font-family="'Segoe Print','Comic Sans MS','Bradley Hand','Chalkboard SE',cursive,sans-serif">
+<rect width="900" height="640" fill="#fbf8f1"/>
+<g fill="none" stroke="#2f2b26" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M330.3,87.4 L410.1,89.6 L490.6,88.1 L571.2,89.3 L568.6,114.3 L569.1,136.4 L571.6,160.6 L489.6,160.5 L408.6,162.6 L331.4,163.0 L330.8,135.9 L330.4,112.7 L329.3,88.9 L362.6,89.0"/>
+<path d="M338.9,256.5 L414.0,258.8 L487.8,259.0 L561.1,258.8 L558.5,298.8 L558.9,341.2 L559.6,381.4 L487.6,381.4 L414.5,382.2 L339.0,381.9 L340.2,340.4 L339.4,300.4 L340.2,257.6 L371.3,258.3"/>
+<path d="M39.7,236.2 L99.2,234.7 L160.3,236.1 L219.9,235.3 L219.8,256.7 L220.9,279.0 L218.8,303.1 L160.3,302.4 L101.4,301.2 L39.9,301.7 L40.4,280.6 L39.1,257.0 L40.3,234.8 L64.7,236.9"/>
+<path d="M40.9,331.8 L99.6,332.0 L159.2,331.3 L221.1,331.3 L220.3,352.6 L221.2,376.6 L219.8,397.0 L161.0,397.3 L99.1,397.9 L40.9,397.6 L38.4,375.7 L38.7,355.6 L39.5,332.2 L65.4,333.3"/>
+<path d="M680.7,237.5 L739.2,235.1 L800.0,235.7 L860.9,236.0 L861.4,258.9 L860.0,281.3 L859.6,302.3 L801.2,301.9 L739.5,302.8 L681.3,303.2 L679.0,279.2 L679.5,256.6 L679.1,236.4 L706.0,235.2"/>
+<path d="M680.2,331.3 L739.0,332.3 L800.5,333.3 L861.3,331.2 L860.6,352.8 L861.0,375.5 L859.4,398.6 L798.8,399.1 L739.5,397.3 L680.4,397.9 L680.2,377.4 L679.8,355.5 L679.0,332.2 L705.6,330.9"/>
+<path d="M350.3,496.9 L416.9,494.6 L484.6,495.9 L549.8,497.0 L550.8,515.6 L551.3,536.8 L548.7,557.1 L481.9,558.8 L417.5,558.3 L348.4,557.7 L351.0,537.2 L349.0,515.8 L349.2,496.2 L378.2,495.4"/>
+<path d="M450.0,250.0 Q455.0,211.0 450.0,172.0 M450.0,172.0 L455.7,181.4 M450.0,172.0 L446.8,182.5"/>
+<path d="M450.0,172.0 Q455.0,211.0 450.0,250.0 M450.0,250.0 L446.8,239.5 M450.0,250.0 L455.7,240.6"/>
+<path d="M228.0,276.0 Q279.3,288.0 332.0,290.0 M332.0,290.0 L321.8,294.1 M332.0,290.0 L322.1,285.1"/>
+<path d="M228.0,370.0 Q279.1,356.1 332.0,352.0 M332.0,352.0 L322.3,357.2 M332.0,352.0 L321.6,348.3"/>
+<path d="M568.0,290.0 Q619.3,278.0 672.0,276.0 M672.0,276.0 L662.1,280.9 M672.0,276.0 L661.8,271.9"/>
+<path d="M568.0,352.0 Q619.1,365.9 672.0,370.0 M672.0,370.0 L661.6,373.7 M672.0,370.0 L662.3,364.8"/>
+<path d="M450.0,490.0 Q454.0,440.0 450.0,390.0 M450.0,390.0 L455.3,399.7 M450.0,390.0 L446.3,400.4"/>
+</g>
+<text x="40" y="44" fill="#2f2b26" font-size="24" text-anchor="start" >buddy mini — how it all connects</text>
+<text x="40" y="68" fill="#7a736a" font-size="15" text-anchor="start" >everything plugs into the esp32. nothing talks to anything else.</text>
+<text x="450" y="120" fill="#2f2b26" font-size="19" text-anchor="middle" >oled screen</text>
+<text x="450" y="145" fill="#7a736a" font-size="15" text-anchor="middle" >buddy's face</text>
+<text x="450" y="300" fill="#2f2b26" font-size="26" text-anchor="middle" >esp32</text>
+<text x="450" y="328" fill="#7a736a" font-size="16" text-anchor="middle" >the brain</text>
+<text x="450" y="354" fill="#7a736a" font-size="13" text-anchor="middle" >runs the code + powers everything</text>
+<text x="130" y="266" fill="#2f2b26" font-size="18" text-anchor="middle" >button 1</text>
+<text x="130" y="290" fill="#7a736a" font-size="14" text-anchor="middle" >touch</text>
+<text x="130" y="362" fill="#2f2b26" font-size="18" text-anchor="middle" >button 2</text>
+<text x="130" y="386" fill="#7a736a" font-size="14" text-anchor="middle" >touch</text>
+<text x="770" y="266" fill="#2f2b26" font-size="18" text-anchor="middle" >buzzer</text>
+<text x="770" y="290" fill="#7a736a" font-size="14" text-anchor="middle" >buddy's voice</text>
+<text x="770" y="362" fill="#2f2b26" font-size="18" text-anchor="middle" >led</text>
+<text x="770" y="386" fill="#7a736a" font-size="14" text-anchor="middle" >“i'm awake” light</text>
+<text x="450" y="528" fill="#2f2b26" font-size="18" text-anchor="middle" >my laptop</text>
+<text x="450" y="550" fill="#7a736a" font-size="14" text-anchor="middle" >usb — power + uploads code</text>
+<text x="478" y="202" fill="#2f2b26" font-size="15" text-anchor="start" >i2c</text>
+<text x="478" y="224" fill="#7a736a" font-size="13" text-anchor="start" >just 2 wires</text>
+<text x="280" y="258" fill="#7a736a" font-size="14" text-anchor="middle" >press</text>
+<text x="280" y="400" fill="#7a736a" font-size="14" text-anchor="middle" >press</text>
+<text x="620" y="256" fill="#7a736a" font-size="14" text-anchor="middle" >beep</text>
+<text x="620" y="400" fill="#7a736a" font-size="14" text-anchor="middle" >on / off</text>
+<text x="40" y="604" fill="#7a736a" font-size="14" text-anchor="start" >every single part also needs ground. pin numbers — still figuring those out.</text>
+</svg>

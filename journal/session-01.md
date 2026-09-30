@@ -75,6 +75,8 @@ upload process all work. debugging a face on an unproven board would be miserabl
 
 ## block diagram
 
+![block diagram](../media/block-diagram.svg)
+
 ```
 esp32
  ├── oled          buddy's face

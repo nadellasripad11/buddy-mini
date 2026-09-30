@@ -20,6 +20,10 @@ v1 is the same brain and face running on a bare breadboard. the case comes later
 
 ---
 
+## how it connects
+
+![block diagram](media/block-diagram.svg)
+
 ## status
 
 | version | what it is | state |

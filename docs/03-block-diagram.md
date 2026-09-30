@@ -6,6 +6,8 @@ how the five parts hang off the ESP32. pin numbers are TBD until step 3 — this
 diagram is about *what connects to what* and *which direction the signal flows*,
 not which metal leg yet.
 
+![block diagram](../media/block-diagram.svg)
+
 ## simple view
 
 ```
@@ -15,37 +17,6 @@ esp32
  ├── button 2      touch input
  ├── buzzer        buddy's voice
  └── status led    "i'm awake"
-```
-
-## with signal direction
-
-everything is a spoke off the ESP32. no part talks to any other part — they all
-only talk to the brain. that's why this is a star, not a chain.
-
-```
-                        ┌──────────────────┐
-                        │   OLED 128x64    │
-                        │   SSD1306, I2C   │   buddy's face
-                        └──────────────────┘
-                                 ▲
-                                 │  I2C: SDA + SCL
-                                 │  (2 data wires + 3V3 + GND)
-                                 │
-   ┌────────────┐        ┌───────┴────────┐        ┌────────────┐
-   │  BUTTON 1  │───────▶│                │───────▶│   BUZZER   │
-   │  tactile   │  in    │     ESP32      │  out   │  passive   │
-   └────────────┘        │                │  PWM   │   piezo    │
-                         │   the brain    │        └────────────┘
-   ┌────────────┐        │                │
-   │  BUTTON 2  │───────▶│  runs the loop │        ┌────────────┐
-   │  tactile   │  in    │  powers all    │───────▶│ STATUS LED │
-   └────────────┘        │                │  out   │  + 220R    │
-                         └───────┬────────┘        └────────────┘
-                                 │
-                                 │ USB data cable
-                                 ▼
-                              laptop
-                       (5V power + code upload)
 ```
 
 ## the same thing as a table
