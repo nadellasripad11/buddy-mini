@@ -121,3 +121,30 @@ a blink is a cheap swap instead of redrawing a whole face.
 one thing i'm making myself remember for when the kit arrives: pin *order along the
 edge* is different between esp32 boards. i go by the number printed on the board,
 not by where it sits in my drawing.
+
+## the two button interactions
+
+**button 1** — happy face for 2 seconds + a rising sweep, 200Hz up to 1200Hz.
+sci-fi power-up noise. **button 2** — the 6-7 cadence: a short high blip for
+"six", then a pitch sliding down for "seh-vennn", paired with a fast double
+blink.
+
+button 2 reuses the blink face on purpose instead of needing a fourth
+expression. the art already exists and a double-blink with the slide gives it
+some attitude.
+
+learned the buzzer's actual limit here. a passive piezo is one vibrating disc,
+so it plays **one tone at a time** — beeps, melodies, slides. it physically
+cannot play a voice or an audio clip, so the 6-7 is an impression of the
+cadence, not the real sound. that's the part, not the code.
+
+also read up on **debouncing**. the metal contacts inside a tactile button
+chatter for a few milliseconds when pressed, so one tap reads as several
+presses and the sound fires multiple times. the fix is ignoring any press
+within ~200ms of the last one, using millis().
+
+one thing i already know is wrong: both sound functions use delay(), which
+blocks, so the eyes freeze while a sound plays. under 400ms so it's tolerable
+for v1, but the idle blink will stutter. the real fix is a non-blocking
+millis() state machine. writing it down now so it's clear i noticed rather
+than missed it.

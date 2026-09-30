@@ -88,6 +88,7 @@ buddy-mini/
 - [02 — parts and what they do](docs/02-parts.md) — every component explained
 - [03 — block diagram](docs/03-block-diagram.md) — how the five parts hang off the ESP32
 - [04 — pin plan](docs/04-pin-plan.md) — which GPIO pins each part gets, and which pins are off-limits
+- [05 — interactions and sounds](docs/05-interactions.md) — what each button does and what it sounds like
 - [journal](journal/README.md) — the devlog
 
 ## hardware
