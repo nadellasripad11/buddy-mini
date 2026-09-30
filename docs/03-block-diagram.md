@@ -6,7 +6,7 @@ how the five parts hang off the ESP32. pin numbers are TBD until step 3 — this
 diagram is about *what connects to what* and *which direction the signal flows*,
 not which metal leg yet.
 
-![block diagram](../media/block-diagram.svg)
+![block diagram](../media/block-diagram.png)
 
 ## simple view
 
