@@ -5,9 +5,28 @@
 one hour per session, one goal per session. each session ends with something that
 visibly works, so a failure is always isolated to the thing i just added.
 
-## session 2 — toolchain (no hardware needed)
+## session 2 — toolchain — DONE (2026-09-30)
 
-can be done **before the kit arrives**.
+done before the kit arrived. everything was already installed:
+
+| thing | version |
+|---|---|
+| arduino-cli | 1.5.1 |
+| esp32 core | 3.3.11 |
+| Adafruit SSD1306 | 2.5.17 |
+| Adafruit GFX | 1.12.6 |
+
+wrote the full v1 firmware and compiled it against `esp32:esp32:esp32doit-devkit-v1`:
+
+```
+Sketch uses 317714 bytes (24%) of program storage space.
+Global variables use 24004 bytes (7%) of dynamic memory.
+```
+
+**`tone()` compiles fine on core 3.3.11**, so the buzzer does not need the LEDC
+fallback. that was the open question and it is now closed.
+
+original plan for this session, kept for the record:
 
 - install the Arduino IDE
 - add ESP32 board support (Boards Manager → "esp32" by Espressif)

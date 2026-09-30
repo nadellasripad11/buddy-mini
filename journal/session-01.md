@@ -148,3 +148,33 @@ blocks, so the eyes freeze while a sound plays. under 400ms so it's tolerable
 for v1, but the idle blink will stutter. the real fix is a non-blocking
 millis() state machine. writing it down now so it's clear i noticed rather
 than missed it.
+
+## wrote the firmware and got it compiling
+
+turns out the toolchain was already on this machine — arduino-cli 1.5.1, esp32
+core 3.3.11, Adafruit SSD1306 2.5.17 and GFX 1.12.6. so instead of just testing
+whether things installed, i wrote the whole of v1 and compiled it.
+
+```
+Sketch uses 317714 bytes (24%) of program storage space.
+Global variables use 24004 bytes (7%) of dynamic memory.
+```
+
+**the open question is answered: `tone()` compiles fine on core 3.3.11**, so the
+buzzer doesn't need the LEDC fallback i was worried about. good thing to know now
+rather than with the hardware in front of me at 1am.
+
+the sketch has all three faces, the idle blink on a millis() timer, both buttons
+with debouncing, both sounds, and the status led. two details i'm happy with:
+
+the mouth and the "^" happy eyes are drawn as parabolas computed pixel by pixel,
+because Adafruit GFX has no arc primitive i trusted to behave predictably. a short
+loop with `y = (x*x)/k` gives an exact curve i can tune.
+
+if the OLED doesn't answer at 0x3C, setup() doesn't just silently fail — the
+status led blinks fast forever. that way a wiring problem is visible without
+plugging into a laptop. worth doing since some ssd1306 boards are at 0x3D.
+
+this is **compiled, not run**. no hardware yet, so none of the drawing or timing
+is proven. i fully expect the face positions to need nudging once i see them on
+a real 128x64 panel.

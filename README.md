@@ -32,7 +32,7 @@ v1 is the same brain and face running on a bare breadboard. the case comes later
 
 | version | what it is | state |
 |---|---|---|
-| v1 (warm-up) | breadboard prototype: OLED face, 2 buttons, buzzer, status LED | in progress |
+| v1 (warm-up) | breadboard prototype: OLED face, 2 buttons, buzzer, status LED | firmware written + compiles, waiting on parts |
 | v2 | tidier wiring, more expressions, sleep mode | not started |
 | v3 | 3D printed enclosure | not started |
 | v4 (someday) | movement, mic, voice | out of scope for Half Life |
@@ -70,6 +70,20 @@ buddy mini is finished when:
 - i can record a short video showing the finished prototype working
 
 ---
+
+## firmware
+
+[`firmware/buddy-mini/buddy-mini.ino`](firmware/buddy-mini/buddy-mini.ino) — the whole of v1:
+the three faces, the idle blink, both buttons with debouncing, both sounds, the status LED.
+
+build it with:
+
+```
+arduino-cli compile --fqbn esp32:esp32:esp32doit-devkit-v1 firmware/buddy-mini
+```
+
+compiles clean against esp32 core 3.3.11 — 24% of program storage, 7% of RAM.
+not yet run on hardware; the kit has not arrived.
 
 ## repo layout
 
