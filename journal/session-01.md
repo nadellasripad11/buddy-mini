@@ -72,3 +72,22 @@ upload process all work. debugging a face on an unproven board would be miserabl
 - `docs/01-scope.md`
 - `docs/02-parts.md`
 - this entry
+
+## block diagram
+
+```
+esp32
+ ├── oled          buddy's face
+ ├── button 1      touch input
+ ├── button 2      touch input
+ ├── buzzer        buddy's voice
+ └── status led    "i'm awake"
+```
+
+full version with signal directions in [docs/03-block-diagram.md](../docs/03-block-diagram.md).
+
+the useful thing i noticed drawing it: it's a **star, not a chain**. nothing
+connects to anything except the ESP32, so a broken part can't break the others
+and i can unplug things one at a time when debugging. also every single part
+needs ground — five parts, five ground wires — which is exactly what the long
+breadboard rails are for.
