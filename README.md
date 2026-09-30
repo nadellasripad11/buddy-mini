@@ -82,6 +82,12 @@ buddy-mini/
 └── README.md
 ```
 
+## a note on the two journals
+
+`JOURNAL.md` and `BOM.md` in the root are **mirrored from Half Life** and get
+overwritten on every sync — do not hand-edit them. `journal/` is my own working
+devlog with the longer notes and the diagrams.
+
 ## docs
 
 - [01 — scope](docs/01-scope.md) — what v1 is and isn't
