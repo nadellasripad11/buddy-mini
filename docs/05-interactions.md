@@ -15,7 +15,7 @@ that's the limit of the part, not something i can code around.
 
 ### button 1 — the cool one
 
-a rising sweep, 200Hz climbing to 1200Hz. sci-fi power-up, `wheeeooop`.
+a rising sweep, 200hz climbing to 1200hz. sci-fi power-up, `wheeeooop`.
 piezos are good at this because sliding a frequency is cheap.
 
 ```cpp
@@ -64,7 +64,7 @@ expression. the art already exists, and a fast double-blink paired with the
 ## debouncing — the thing that will go wrong
 
 the metal contacts inside a tactile button physically chatter for a few
-milliseconds when pressed. the ESP32 reads that as several presses, so the
+milliseconds when pressed. the esp32 reads that as several presses, so the
 sound fires multiple times off one tap.
 
 fix: ignore any press that happens within ~200ms of the last one.
@@ -85,7 +85,7 @@ void loop() {
 ```
 
 note `== LOW`. that's the internal pull-up from [04](04-pin-plan.md) showing up
-in real code — the pin sits HIGH until the button connects it to ground.
+in real code — the pin sits high until the button connects it to ground.
 
 ## known limitation to fix later
 
@@ -99,7 +99,7 @@ didn't notice.
 
 ## if `tone()` doesn't compile
 
-`tone()` exists in the ESP32 Arduino core 3.x. on older cores it doesn't, and
+`tone()` exists in the esp32 arduino core 3.x. on older cores it doesn't, and
 you have to drive the buzzer through the LEDC peripheral instead
 (`ledcAttach` / `ledcWriteTone`). if the compiler says `tone was not declared
 in this scope`, that's which version i'm on.
